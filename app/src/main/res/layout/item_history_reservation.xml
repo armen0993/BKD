@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.android.bkd.ui.home.model.ReservationHistoryModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/container_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="2dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_logo_car"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/label_car_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/song_myung"
+                    android:lineHeight="22.5sp"
+                    android:text="Ducato Koelwagen"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="18dp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/img_logo_car"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="17.57sp"
+                    android:text="Double cabin"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="300"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/img_logo_car"
+                    app:layout_constraintTop_toBottomOf="@id/label_car_name"
+                    tools:targetApi="p" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="65dp"
+                    android:background="#A18998AA"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_car_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="77dp"
+                    android:src="@drawable/ic_car_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/img_car_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="77dp"
+                    android:layout_marginEnd="11dp"
+                    android:src="@drawable/ic_car_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/label_address_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="67dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="12.55sp"
+                    android:text="Address name"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@id/line"
+                    app:layout_constraintStart_toEndOf="@id/img_car_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_address_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="67dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="12.55sp"
+                    android:text="Address name"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@id/img_car_2"
+                    app:layout_constraintStart_toEndOf="@id/line"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_day_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="22.59sp"
+                    android:text="22"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@id/label_address_name_1"
+                    app:layout_constraintTop_toBottomOf="@id/label_address_name_1"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_day_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="22.59sp"
+                    android:text="22"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@id/label_address_name_2"
+                    app:layout_constraintTop_toBottomOf="@id/label_address_name_2"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_month_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="10.04sp"
+                    android:text="Feb \n10:00"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="8sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/label_day_1"
+                    app:layout_constraintTop_toBottomOf="@id/label_address_name_1"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_month_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="10.04sp"
+                    android:text="Feb \n10:00"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="8sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/label_day_2"
+                    app:layout_constraintTop_toBottomOf="@id/label_address_name_2"
+                    tools:targetApi="p" />
+
+                <ImageView
+                    android:id="@+id/img_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="131dp"
+                    android:src="@drawable/ic_agreement"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/label_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="62dp"
+                    android:layout_marginTop="132dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="22.59sp"
+                    android:text="BKD Agreement"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="300"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <ImageView
+                    android:id="@+id/img_euro"
+                    android:layout_width="13dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="167dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_euro"
+                    app:layout_constraintEnd_toStartOf="@id/label_euro"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/label_euro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="163dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="22.59sp"
+                    android:text="XX,X "
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="197dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="17.57sp"
+                    android:text="Status:"
+                    android:textColor="#8998AA"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_status_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="197dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="17.57sp"
+                    android:text="Completed"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/label_status"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/label_review_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="13dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="17.57sp"
+                    android:text="Review status by Admins:  "
+                    android:textColor="#8998AA"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_status"
+                    tools:targetApi="p" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:rating="4.3"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    app:layout_constraintBottom_toBottomOf="@id/label_review_status"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_review_status" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

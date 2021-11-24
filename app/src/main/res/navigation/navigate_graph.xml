@@ -3,11 +3,97 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigate_graph"
-    app:startDestination="@id/homeFragment2">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/homeFragment2"
+        android:id="@+id/homeFragment"
         android:name="com.android.bkd.ui.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.android.bkd.ui.category.CategoryFragment"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.android.bkd.ui.notification.NotificationFragment"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/myReservationsFragment"
+        android:name="com.android.bkd.ui.my_reservations.MyReservationsFragment"
+        tools:layout="@layout/fragment_my_reservations" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.android.bkd.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_enterEmailFragment"
+            app:destination="@id/enterEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.android.bkd.ui.map.MapFragment"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.android.bkd.ui.search.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.android.bkd.ui.profile.registration.RegistrationFragment"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_checkYourEmailFragment"
+            app:destination="@id/checkYourEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkYourEmailFragment"
+        android:name="com.android.bkd.ui.profile.registration.CheckYourEmailFragment"
+        tools:layout="@layout/fragment_check_your_email">
+        <action
+            android:id="@+id/action_checkYourEmailFragment_to_emailVerifiedSuccessFragment"
+            app:destination="@id/emailVerifiedSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailVerifiedSuccessFragment"
+        android:name="com.android.bkd.ui.profile.registration.EmailVerifiedSuccessFragment"
+        tools:layout="@layout/fragment_email_verified_success">
+        <action
+            android:id="@+id/action_emailVerifiedSuccessFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkEmailFragment"
+        android:name="com.android.bkd.ui.profile.sign_in.CheckEmailFragment"
+        tools:layout="@layout/fragment_check_email">
+        <action
+            android:id="@+id/action_checkEmailFragment_to_createNewPasswordFragment"
+            app:destination="@id/createNewPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterEmailFragment"
+        android:name="com.android.bkd.ui.profile.sign_in.EnterEmailFragment"
+        tools:layout="@layout/fragment_enter_email">
+        <action
+            android:id="@+id/action_enterEmailFragment_to_checkEmailFragment"
+            app:destination="@id/checkEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewPasswordFragment"
+        android:name="com.android.bkd.ui.profile.sign_in.CreateNewPasswordFragment"
+        tools:layout="@layout/fragment_create_new_password">
+        <action
+            android:id="@+id/action_createNewPasswordFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>

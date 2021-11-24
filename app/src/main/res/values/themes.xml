@@ -14,5 +14,14 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="AppCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="borderWidth">2dp</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#DADADA</item>
+        <item name="colorControlActivated">@color/color_yellow</item>
+    </style>
+
 
 </resources>
