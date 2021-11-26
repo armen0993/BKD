@@ -3,7 +3,7 @@ package com.android.bkd.ui.search.view_holder
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.android.bkd.databinding.ItemFilterBinding
-import com.android.bkd.models.FilterModel
+import com.android.bkd.ui.search.model.FilterModel
 
 
 class FilterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

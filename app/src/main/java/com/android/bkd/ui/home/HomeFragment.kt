@@ -2,9 +2,9 @@ package com.android.bkd.ui.home
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.animation.AnimationUtils
+import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.constraintlayout.motion.widget.TransitionAdapter
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +23,6 @@ import com.android.bkd.ui.home.model.CarTypeModel
 import com.android.bkd.utils.Validation
 import com.android.bkd.view_model.HomeViewModel
 import com.android.bkd.widget.CarouselLayoutManager
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -57,6 +56,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         mBinding.containerReturnTime.collapse()
         mBinding.containerMapLocation.collapse()
         initLocationRecycler()
+        checkerPositionButton()
+
     }
 
 
@@ -113,24 +114,38 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         if (checkerErrors()) {
             mBinding.labelError.show()
             mBinding.labelError.text = Validation.ERROR_EDIT_TEXT.errorMassage
-            startAnimate(R.anim.move_to_left)
+            if (isSearch) {
+                mBinding.containerButton.transitionToStart()
+                isSearch= !isSearch
+            }
             checkerErrors = !checkerErrors
         } else {
             mBinding.labelError.remove()
             // mViewModel.navigate(HomeFragmentDirections.actionHomeFragmentToSearchFragment())
             findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
         }
+
     }
 
+    private fun checkerPositionButton() {
+        mBinding.containerButton.setTransitionListener(object : TransitionAdapter() {
 
-    private fun initListeners() {
-        mBinding.containerSearch.setOnClickListener {
-            startAnimate(R.anim.move_to_right)
-            lifecycleScope.launch {
-                delay(1500)
+            override fun onTransitionCompleted(
+                motionLayout: MotionLayout?,
+                currentId: Int
+            ) {
+                when (currentId) {
+                    R.id.end -> {
+                        isSearch = !isSearch
+                    }
+                }
                 initErrors()
             }
-        }
+        })
+    }
+
+    private fun initListeners() {
+
         mBinding.ImagePickUp.setOnClickListener {
             if (isPickUpTime) hidePickUpTime()
             else showPickUpTime()
@@ -178,14 +193,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         isReturnLocation = !isReturnLocation
     }
 
-    private fun startAnimate(animate: Int) {
-        mBinding.labelSearch.apply {
-            val anim = AnimationUtils.loadAnimation(context, animate)
-            anim.fillAfter = true
-            startAnimation(anim)
-            isSearch = !isSearch
-        }
-    }
 
     private fun initCarList() {
         mBinding.carList.adapter = CarListAdapter()
@@ -300,7 +307,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             mBinding.imageReturnLocation.animate().rotation(0f).setDuration(500).start()
             isReturnLocation = !isReturnLocation
         }
-         //mViewModel.navigate(HomeFragmentDirections.actionHomeFragmentToMapFragment())
+        //mViewModel.navigate(HomeFragmentDirections.actionHomeFragmentToMapFragment())
         findNavController().navigate(R.id.action_homeFragment_to_mapFragment)
 
     }

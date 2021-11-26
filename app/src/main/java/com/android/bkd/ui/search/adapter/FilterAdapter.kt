@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.android.bkd.R
-import com.android.bkd.models.FilterModel
+import com.android.bkd.ui.search.model.FilterModel
 import com.android.bkd.ui.search.view_holder.FilterViewHolder
 
 class FilterAdapter : RecyclerView.Adapter<FilterViewHolder>() {

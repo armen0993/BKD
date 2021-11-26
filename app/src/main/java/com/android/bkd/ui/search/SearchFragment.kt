@@ -9,8 +9,8 @@ import com.android.bkd.base.BaseViewModel
 import com.android.bkd.databinding.FragmentSearchBinding
 import com.android.bkd.extensions.remove
 import com.android.bkd.extensions.show
-import com.android.bkd.models.FilterModel
-import com.android.bkd.ui.search.adapter.CarListSearchAdapter
+import com.android.bkd.ui.search.model.FilterModel
+import com.android.bkd.ui.search.adapter.CarSearchListSearchAdapter
 import com.android.bkd.ui.search.adapter.FilterAdapter
 import com.android.bkd.view_model.SearchViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -40,6 +40,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
             else mBinding.containerFilter.remove()
             isFilter = !isFilter
         }
+
     }
 
     private fun initRecycler() {
@@ -74,7 +75,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
     }
 
     private fun initCarList() {
-        mBinding.carList.adapter = CarListSearchAdapter()
+        mBinding.carList.adapter = CarSearchListSearchAdapter()
         mBinding.carList.isNestedScrollingEnabled = false
     }
 

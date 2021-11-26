@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.android.bkd.ui.home.model.ReservationHistoryModel" />
+            type="com.android.bkd.ui.my_reservations.history.model.ReservationHistoryModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

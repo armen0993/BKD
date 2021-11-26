@@ -1,4 +1,4 @@
-package com.android.bkd.models
+package com.android.bkd.ui.search.model
 
 data class FilterModel(
     val name: String,

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigate_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/detailsFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -96,4 +96,8 @@
             android:id="@+id/action_createNewPasswordFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.android.bkd.ui.details.DetailsFragment"
+       tools:layout="@layout/fragment_details" />
 </navigation>

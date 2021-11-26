@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.android.bkd.R
-import com.android.bkd.models.CategoryModel
+import com.android.bkd.ui.category.model.CategoryModel
 import com.android.bkd.ui.category.view_holder.CategoryViewHolder
 
 class CategoryAdapter : RecyclerView.Adapter<CategoryViewHolder>() {

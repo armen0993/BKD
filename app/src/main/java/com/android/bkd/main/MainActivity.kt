@@ -1,28 +1,16 @@
 package com.android.bkd.main
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
-import android.util.AttributeSet
-import android.view.View
-import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.TextView
-import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.android.bkd.R
 import com.android.bkd.databinding.ActivityMainBinding
-import com.android.bkd.databinding.MainHeaderBinding
-import com.android.bkd.ui.home.adapter.LocationAdapter
 import com.android.bkd.view_model.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

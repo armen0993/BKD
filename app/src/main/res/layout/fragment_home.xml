@@ -51,6 +51,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ScrollView
+            android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:overScrollMode="never"
@@ -61,10 +62,12 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/purple_700"
-                android:paddingBottom="32dp">
+                android:paddingBottom="32dp"
+              >
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,8 +80,7 @@
                     android:background="@drawable/background_field"
                     app:layout_constraintTop_toTopOf="parent"
                     app:mViewModel="@{mViewModel}"
-                    app:openCalendar="@{fragment.fragmentManager}"
-                    >
+                    app:openCalendar="@{fragment.fragmentManager}">
 
 
                     <ImageView
@@ -103,8 +105,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:show="@{mViewModel.titleDay}"
-                        />
+                        app:show="@{mViewModel.titleDay}" />
 
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -113,8 +114,7 @@
                         android:layout_height="match_parent"
                         app:layout_constraintEnd_toStartOf="@id/dateLine"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:show="@{mViewModel.showDate}"
-                       >
+                        app:show="@{mViewModel.showDate}">
 
 
                         <TextView
@@ -171,8 +171,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:show="@{mViewModel.showDate}"
-                       />
+                        app:show="@{mViewModel.showDate}" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/layoutEndDate"
@@ -180,8 +179,7 @@
                         android:layout_height="match_parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/dateLine"
-                        app:show="@{mViewModel.showDate}"
-                        >
+                        app:show="@{mViewModel.showDate}">
 
                         <TextView
                             android:id="@+id/textEndDate"
@@ -450,18 +448,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:visibility="gone"
                     android:fontFamily="@font/mulish"
-                    android:textFontWeight="300"
-                    android:textStyle="normal"
-                    android:textSize="10.5sp"
                     android:lineHeight="13.18sp"
                     android:textColor="@color/color_red"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:textFontWeight="300"
+                    android:textSize="10.5sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/pickUpCheckBox"
-                    tools:targetApi="p"
-                    tools:ignore="SmallSp" />
+                    tools:ignore="SmallSp"
+                    tools:targetApi="p" />
 
 
                 <androidx.constraintlayout.widget.Guideline
@@ -478,38 +476,47 @@
                     android:layout_marginTop="32dp"
                     app:layout_constraintTop_toBottomOf="@id/pickUpCheckBox" />
 
-                <LinearLayout
-                    android:id="@+id/container_search"
+
+
+                <androidx.constraintlayout.motion.widget.MotionLayout
+                    android:id="@+id/container_button"
                     android:layout_width="178dp"
                     android:layout_height="42dp"
                     android:layout_marginTop="32dp"
                     android:background="@drawable/bg_rounded_blue"
-                    android:orientation="horizontal"
                     android:weightSum="2"
+                    app:layoutDescription="@xml/button_scene"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/carTypeList">
+                    app:layout_constraintTop_toBottomOf="@id/carTypeList"
+                  >
+
 
                     <TextView
-                        android:id="@+id/label_search"
-                        android:layout_width="0dp"
+                        android:id="@+id/label_button"
+                        android:layout_width="89dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:background="@drawable/bg_rounded_white"
                         android:gravity="center"
                         android:text="@string/search"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent" />
 
                     <ImageView
-                        android:layout_width="0dp"
+                        android:id="@+id/img_button"
+                        android:layout_width="89dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:src="@drawable/ic_three_slack"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         tools:ignore="ContentDescription" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.motion.widget.MotionLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/carList"
@@ -518,9 +525,10 @@
                     android:layout_marginTop="32dp"
                     android:overScrollMode="never"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintTop_toBottomOf="@id/container_search" />
+                    app:layout_constraintTop_toBottomOf="@id/container_button" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toStartOf="@id/guideLineVerticalCenter"
@@ -566,6 +574,7 @@
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="@id/layoutTime"
@@ -645,10 +654,11 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="66dp"
             android:layout_height="34dp"
             android:layout_marginBottom="6dp"

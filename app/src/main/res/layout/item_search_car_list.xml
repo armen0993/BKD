@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="67dp"
+                android:background="@drawable/shadow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/label_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="13dp"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="20.08sp"
+                    android:text="@string/_details"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5.89dp"
+                    android:src="@drawable/ic_arrows_details"
+                    app:layout_constraintBottom_toBottomOf="@id/label_details"
+                    app:layout_constraintEnd_toStartOf="@id/label_details"
+                    app:layout_constraintTop_toTopOf="@id/label_details"
+                    tools:ignore="ContentDescription"/>
+
+                <ImageView
+                    android:id="@+id/img_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginTop="52dp"
+                    android:src="@drawable/ic_fiat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/label_car_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:fontFamily="@font/song_myung"
+                    android:lineHeight="22.5sp"
+                    android:text="@string/ducato_koelwagen"
+                    android:textColor="@color/purple_200"
+                    android:textFontWeight="400"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@id/img_brand"
+                    app:layout_constraintStart_toEndOf="@id/img_brand"
+                    app:layout_constraintTop_toTopOf="@id/img_brand"
+                    tools:targetApi="p" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/line_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_search_car_line"
+                    app:layout_constraintTop_toBottomOf="@id/label_car_name">
+
+                    <ImageView
+                        android:id="@+id/img_euro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="101dp"
+                        android:src="@drawable/ic_euro"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/label_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/mulish"
+                        android:lineHeight="22.5sp"
+                        android:text="99,8"
+                        android:textColor="@color/purple_200"
+                        android:textFontWeight="400"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@id/img_euro"
+                        app:layout_constraintStart_toEndOf="@id/img_euro"
+                        app:layout_constraintTop_toTopOf="@id/img_euro"
+                        tools:targetApi="p" />
+
+                    <TextView
+                        android:id="@+id/label_price_vat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/mulish"
+                        android:lineHeight="22.5sp"
+                        android:text="@string/incl_vat"
+                        android:textColor="@color/purple_200"
+                        android:textFontWeight="400"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@id/img_euro"
+                        app:layout_constraintStart_toEndOf="@id/label_price"
+                        app:layout_constraintTop_toTopOf="@id/img_euro"
+                        tools:targetApi="p" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_info"
+                    android:layout_width="111dp"
+                    android:layout_height="37dp"
+
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="9dp"
+                    android:background="@drawable/bg_rounded_stroke_yellow"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="22.59sp"
+                    android:text="@string/more_info"
+                    android:textAllCaps="false"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="300"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_reverse"
+                    app:layout_constraintTop_toBottomOf="@id/line_price"
+                    tools:targetApi="p" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_reverse"
+                    android:layout_width="111dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="9dp"
+                    android:background="@drawable/bg_rounded_yellow_map"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="22.59sp"
+                    android:text="@string/reserve"
+                    android:textAllCaps="false"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="300"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_info"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line_price"
+                    tools:targetApi="p" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_car"
+                app:layout_constraintBottom_toTopOf="@id/container_main"
+                app:layout_constraintStart_toEndOf="@id/guideLine"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.10" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

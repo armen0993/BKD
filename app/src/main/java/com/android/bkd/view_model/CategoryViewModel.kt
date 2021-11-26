@@ -2,7 +2,7 @@ package com.android.bkd.view_model
 
 import com.android.bkd.R
 import com.android.bkd.base.BaseViewModel
-import com.android.bkd.models.CategoryModel
+import com.android.bkd.ui.category.model.CategoryModel
 
 class CategoryViewModel:BaseViewModel() {
 

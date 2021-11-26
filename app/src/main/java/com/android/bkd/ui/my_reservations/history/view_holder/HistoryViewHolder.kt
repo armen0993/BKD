@@ -2,9 +2,8 @@ package com.android.bkd.ui.my_reservations.history.view_holder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-
 import com.android.bkd.databinding.ItemHistoryReservationBinding
-import com.android.bkd.ui.home.model.ReservationHistoryModel
+import com.android.bkd.ui.my_reservations.history.model.ReservationHistoryModel
 
 class HistoryViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
 

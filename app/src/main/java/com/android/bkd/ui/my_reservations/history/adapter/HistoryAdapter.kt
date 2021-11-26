@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 
 import com.android.bkd.R
-import com.android.bkd.ui.home.model.ReservationHistoryModel
+import com.android.bkd.ui.my_reservations.history.model.ReservationHistoryModel
 import com.android.bkd.ui.my_reservations.history.view_holder.HistoryViewHolder
 
 class HistoryAdapter:RecyclerView.Adapter<HistoryViewHolder>() {

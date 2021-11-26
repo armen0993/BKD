@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="17dp"
-                    android:src="@drawable/ic_square"
+                    android:src="@drawable/ic_driving_license"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="ContentDescription" />

@@ -90,6 +90,11 @@
     <string name="label_2021_all_rights_reserved">© 2021 All rights reserved</string>
     <string name="label_terms_of_use">Terms of Use</string>
     <string name="label_privacy_policy">Privacy Policy</string>
+    <string name="_details"><u>Details</u></string>
+    <string name="details">Details</string>
+    <string name="incl_vat">(incl. VAT)</string>
+    <string name="more_info">More info</string>
+    <string name="reserve">Reserve</string>
 
 
 
