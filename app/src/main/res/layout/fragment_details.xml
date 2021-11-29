@@ -62,19 +62,19 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="50dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="103dp"
+            android:background="@drawable/bg_reserve_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="103dp"
-            android:background="@drawable/bg_reserve_button">
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/label_reserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
                 android:fontFamily="@font/song_myung"
                 android:lineHeight="25sp"
-                android:layout_marginStart="22dp"
                 android:text="@string/reserve"
                 android:textColor="#88FFFFFF"
                 android:textFontWeight="400"
@@ -88,7 +88,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-               android:layout_marginStart="50dp"
+                android:layout_marginStart="50dp"
                 android:src="@drawable/ic_three_slack"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/label_reserve"
@@ -108,8 +108,6 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                
-
 
 
                 <ImageView
@@ -246,9 +244,9 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_rounded_white_details"
                     android:elevation="6dp"
+                    app:layout_constraintEnd_toStartOf="@id/image_car_3"
                     app:layout_constraintStart_toStartOf="@id/image_car_1"
-                    app:layout_constraintTop_toBottomOf="@id/image_car_1"
-                    app:layout_constraintEnd_toStartOf="@id/image_car_3">
+                    app:layout_constraintTop_toBottomOf="@id/image_car_1">
 
 
                     <ImageView
@@ -261,7 +259,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="ContentDescription"/>
+                        tools:ignore="ContentDescription" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -269,12 +267,12 @@
                     android:id="@+id/image_car_3"
                     android:layout_width="0dp"
                     android:layout_height="66dp"
+                    android:layout_marginHorizontal="9dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_rounded_white_details"
                     android:elevation="6dp"
-                    android:layout_marginHorizontal="9dp"
-                    app:layout_constraintStart_toEndOf="@id/image_car_2"
                     app:layout_constraintEnd_toStartOf="@id/image_car_4"
+                    app:layout_constraintStart_toEndOf="@id/image_car_2"
                     app:layout_constraintTop_toBottomOf="@id/image_car_1">
 
                     <ImageView
@@ -288,7 +286,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="ContentDescription"/>
+                        tools:ignore="ContentDescription" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -297,11 +295,11 @@
                     android:layout_width="0dp"
                     android:layout_height="66dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginEnd="9dp"
                     android:background="@drawable/bg_rounded_white_details"
                     android:elevation="6dp"
-                    android:layout_marginEnd="9dp"
-                    app:layout_constraintStart_toEndOf="@id/image_car_3"
                     app:layout_constraintEnd_toStartOf="@id/image_car_5"
+                    app:layout_constraintStart_toEndOf="@id/image_car_3"
                     app:layout_constraintTop_toBottomOf="@id/image_car_1">
 
                     <ImageView
@@ -314,7 +312,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="ContentDescription"/>
+                        tools:ignore="ContentDescription" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -326,8 +324,8 @@
                     android:background="@drawable/bg_rounded_white_details"
                     android:elevation="6dp"
                     app:layout_constraintEnd_toEndOf="@id/image_car_1"
-                    app:layout_constraintTop_toBottomOf="@id/image_car_1"
-                    app:layout_constraintStart_toEndOf="@id/image_car_4">
+                    app:layout_constraintStart_toEndOf="@id/image_car_4"
+                    app:layout_constraintTop_toBottomOf="@id/image_car_1">
 
                     <ImageView
                         android:id="@+id/img_car_5"
@@ -339,7 +337,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="ContentDescription"/>
+                        tools:ignore="ContentDescription" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -352,7 +350,7 @@
                     android:src="@drawable/ic_driving_license"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/image_car_2"
-                    tools:ignore="ContentDescription"/>
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/label_driving_license"
@@ -367,8 +365,8 @@
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@id/img_driving_license"
-                    app:layout_constraintTop_toTopOf="@id/img_driving_license"
                     app:layout_constraintStart_toEndOf="@id/img_driving_license"
+                    app:layout_constraintTop_toTopOf="@id/img_driving_license"
                     tools:targetApi="p" />
 
                 <ImageView
@@ -387,9 +385,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="21dp"
+                    android:fontFamily="@font/mulish"
                     android:text="@string/_16_5_m"
                     android:textColor="@color/teal_700"
-                    android:fontFamily="@font/mulish"
                     android:textFontWeight="300"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="@id/img_cube"
@@ -404,9 +402,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="111dp"
                     android:src="@drawable/ic_scale"
+                    app:layout_constraintBottom_toBottomOf="@id/img_driving_license"
                     app:layout_constraintStart_toEndOf="@id/img_driving_license"
                     app:layout_constraintTop_toTopOf="@id/img_driving_license"
-                    app:layout_constraintBottom_toBottomOf="@id/img_driving_license"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -414,9 +412,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"
+                    android:fontFamily="@font/mulish"
                     android:text="@string/_499_kg"
                     android:textColor="@color/teal_700"
-                    android:fontFamily="@font/mulish"
                     android:textFontWeight="300"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="@id/img_scale"
@@ -429,9 +427,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_car_size"
+                    app:layout_constraintBottom_toBottomOf="@id/img_cube"
                     app:layout_constraintStart_toStartOf="@id/img_scale"
                     app:layout_constraintTop_toTopOf="@id/img_cube"
-                    app:layout_constraintBottom_toBottomOf="@id/img_cube"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -439,16 +437,90 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
+                    android:fontFamily="@font/mulish"
                     android:text="@string/_2_15_x_1_55_x_1_36_m"
                     android:textColor="@color/teal_700"
-                    android:fontFamily="@font/mulish"
                     android:textFontWeight="300"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="@id/img_car_size"
                     app:layout_constraintStart_toEndOf="@id/img_car_size"
                     app:layout_constraintTop_toTopOf="@id/img_car_size"
                     tools:targetApi="p" />
-                
+
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="20dp"
+                        android:elevation="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_cube">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+
+                        <TextView
+                            android:id="@+id/title_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/mulish"
+                            android:lineHeight="22.59sp"
+                            android:text="@string/details"
+                            android:textColor="@color/teal_700"
+                            android:textFontWeight="600"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:targetApi="p" />
+
+                        <ImageView
+                            android:id="@+id/img_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="14dp"
+                            android:src="@drawable/ic_arrow_up"
+                            app:layout_constraintBottom_toBottomOf="@id/details"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/details"
+                            tools:ignore="ContentDescription" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/container_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@id/details">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
