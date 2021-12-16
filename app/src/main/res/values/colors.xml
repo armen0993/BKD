@@ -13,4 +13,5 @@
     <color name="color_profile_line">#BD8998AA</color>
     <color name="color_yellow">#ABE9C96B</color>
     <color name="color_red">#FF4B55</color>
+    <color name="color_gray">#8998AA</color>
 </resources>

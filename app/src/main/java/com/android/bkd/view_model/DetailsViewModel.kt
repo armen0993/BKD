@@ -3,6 +3,7 @@ package com.android.bkd.view_model
 import com.android.bkd.R
 import com.android.bkd.base.BaseViewModel
 import com.android.bkd.ui.details.model.DetailsCarModel
+import com.android.bkd.ui.details.model.TailLiftCarModel
 
 class DetailsViewModel : BaseViewModel() {
 
@@ -18,6 +19,14 @@ class DetailsViewModel : BaseViewModel() {
         DetailsCarModel(R.drawable.ic_arrow_gps, "GPS"),
         DetailsCarModel(R.drawable.ic_tow_bar_gray, "Tow Bar"),
         DetailsCarModel(R.drawable.ic_door, "Slide door")
+    )
+
+
+    fun getTailLift() = listOf(
+        TailLiftCarModel("Tail lift lifting capacity", 300,"kg"),
+        TailLiftCarModel(" Tail lift length", 190,"cm"),
+        TailLiftCarModel("Loading floor height", 68,"cm"),
+
     )
 
 

@@ -22,5 +22,6 @@ val viewModelModules = module {
     viewModel { CreateNewPasswordViewModel() }
     viewModel { EnterEmailViewModel() }
     viewModel { DetailsViewModel() }
+    viewModel { AccessoriesViewModel() }
 
 }

@@ -30,7 +30,6 @@
             android:lineHeight="16.32sp"
             android:fontFamily="@font/mulish"
             android:layout_marginStart="20dp"
-
             android:textAlignment="center"
             android:textColor="@color/teal_700"
             android:textFontWeight="400"

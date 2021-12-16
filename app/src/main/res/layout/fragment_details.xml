@@ -60,6 +60,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reserve"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginEnd="103dp"
@@ -100,7 +101,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/reserve"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolBar">
@@ -448,26 +449,24 @@
                     tools:targetApi="p" />
 
 
-
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    android:elevation="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_cube">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/detail_and_icon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="20dp"
-                        android:elevation="6dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/img_cube">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/details"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
+                        app:layout_constraintTop_toTopOf="parent">
 
 
                         <TextView
@@ -492,33 +491,141 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="14dp"
                             android:src="@drawable/ic_arrow_up"
-                            app:layout_constraintBottom_toBottomOf="@id/details"
+                            app:layout_constraintBottom_toBottomOf="@id/title_details"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@id/details"
+                            app:layout_constraintTop_toTopOf="@id/title_details"
                             tools:ignore="ContentDescription" />
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                            android:id="@+id/container_details"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:ael_duration="500"
-                            app:ael_expanded="false"
-                            app:ael_orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/details">
-
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/recycler_details"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
-
-                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/container_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ael_duration="500"
+                        app:ael_expanded="false"
+                        app:ael_orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/detail_and_icon">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/tail_lift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/details">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/tail_lift_and_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/title_tail_lift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/mulish"
+                            android:lineHeight="22.59sp"
+                            android:text="@string/tail_lift"
+                            android:textColor="@color/teal_700"
+                            android:textFontWeight="600"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:targetApi="p" />
+
+                        <ImageView
+                            android:id="@+id/img_tail_lift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="14dp"
+                            android:src="@drawable/ic_arrow_up"
+                            app:layout_constraintBottom_toBottomOf="@id/title_tail_lift"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/title_tail_lift"
+                            tools:ignore="ContentDescription" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/container_tail_lift"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ael_duration="500"
+                        app:ael_expanded="false"
+                        app:ael_orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/tail_lift">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_tail_lift"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_accessories"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="21dp"
+                    android:background="@drawable/bg_rounded_yellow_map"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="22.59sp"
+                    android:text="@string/accessories"
+                    android:textAllCaps="false"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@id/btn_add_driver"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tail_lift"
+                    tools:targetApi="p" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_driver"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="28dp"
+                    android:background="@drawable/bg_rounded_yellow_map"
+                    android:fontFamily="@font/mulish"
+                    android:lineHeight="17.57sp"
+                    android:text="@string/additional_driver"
+                    android:textAllCaps="false"
+                    android:textColor="@color/teal_700"
+                    android:textFontWeight="600"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_accessories"
+                    app:layout_constraintTop_toTopOf="@+id/btn_accessories"
+                    tools:targetApi="p" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

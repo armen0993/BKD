@@ -47,7 +47,11 @@
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.android.bkd.ui.search.SearchFragment"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.android.bkd.ui.profile.registration.RegistrationFragment"
@@ -99,5 +103,13 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.android.bkd.ui.details.DetailsFragment"
-       tools:layout="@layout/fragment_details" />
+       tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_accessoriesFragment"
+            app:destination="@id/accessoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accessoriesFragment"
+        android:name="com.android.bkd.ui.accessories.AccessoriesFragment"
+        tools:layout="@layout/fragment_accessories" />
 </navigation>

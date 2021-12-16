@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.bkd.R
 import com.android.bkd.ui.search.view_holder.CarSearchListViewHolder
 
-class CarSearchListSearchAdapter : RecyclerView.Adapter<CarSearchListViewHolder>() {
+class CarSearchListSearchAdapter() : RecyclerView.Adapter<CarSearchListViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarSearchListViewHolder =
@@ -18,6 +18,7 @@ class CarSearchListSearchAdapter : RecyclerView.Adapter<CarSearchListViewHolder>
 
     override fun getItemCount(): Int = 10
     override fun onBindViewHolder(holder: CarSearchListViewHolder, position: Int) {
+        holder.initListener()
 
     }
 }

@@ -94,6 +94,7 @@
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/drawable/my_reservation_icon_selector.xml" value="0.11296296296296296" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/drawable/shadow.xml" value="0.2657407407407407" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/activity_main.xml" value="0.19479166666666667" />
+        <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/fragment_accessories.xml" value="0.25" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/fragment_active_reservations.xml" value="0.19739583333333333" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/fragment_category.xml" value="0.19739583333333333" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/fragment_check_email.xml" value="0.1953125" />
@@ -118,6 +119,7 @@
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/item_history_reservation.xml" value="0.19739583333333333" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/item_location.xml" value="0.3546875" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/item_search_car_list.xml" value="0.3546875" />
+        <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/item_tail_lift_car.xml" value="0.19583333333333333" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/item_time.xml" value="0.3546875" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/layout/main_header.xml" value="0.3546875" />
         <entry key="..\:/ArmenWorks/BKD/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
