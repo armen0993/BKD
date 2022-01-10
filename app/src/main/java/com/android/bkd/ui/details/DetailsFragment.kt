@@ -31,6 +31,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
         adapterTailLift()
         mBinding.containerDetails.expand()
         mBinding.containerTailLift.collapse()
+
     }
 
     private fun initListeners() {

@@ -99,6 +99,8 @@
     <string name="accessories">Accessories</string>
     <string name="additional_driver">Additional Driver</string>
     <string name="total_price">Total price</string>
+    <string name="tension_straps_for_rent">Tension straps for rent</string>
+    <string name="add">Add</string>
 
 
 </resources>

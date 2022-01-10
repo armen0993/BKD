@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="pieces"
+            type="String" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/bg_accessories_blue"
+        android:elevation="6dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/bg_accessories_white"
+            android:elevation="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/label_accessories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:alpha="0.87"
+                android:fontFamily="@font/song_myung"
+                android:lineHeight="22.5sp"
+                android:text="@string/tension_straps_for_rent"
+                android:textColor="@color/teal_700"
+                android:textFontWeight="400"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="p" />
+
+            <ImageView
+                android:id="@+id/icon_accessories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/ic_accessories"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_accessories"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/price_accessories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="55dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulish"
+                android:lineHeight="27.61sp"
+
+                android:textColor="@color/teal_700"
+                android:textFontWeight="600"
+                android:textSize="22sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:targetApi="p" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/ic_euro"
+                app:layout_constraintBottom_toBottomOf="@id/price_accessories"
+                app:layout_constraintEnd_toStartOf="@id/price_accessories"
+                app:layout_constraintTop_toTopOf="@id/price_accessories"
+                app:layout_constraintStart_toEndOf="@+id/icon_accessories"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/btn_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="55dp"
+                android:src="@drawable/ic_btn_plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="44dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/pieces_accessories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/mulish"
+                android:lineHeight="22.59sp"
+                android:text="@{pieces}"
+                android:textColor="@color/teal_700"
+                android:textFontWeight="400"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toTopOf="@id/btn_plus"
+                app:layout_constraintBottom_toBottomOf="@id/btn_plus"
+                app:layout_constraintEnd_toStartOf="@id/btn_plus"
+                tools:targetApi="p" />
+
+            <ImageView
+                android:id="@+id/btn_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_btn_minus"
+                app:layout_constraintEnd_toStartOf="@+id/pieces_accessories"
+                app:layout_constraintTop_toTopOf="@id/pieces_accessories"
+                app:layout_constraintBottom_toBottomOf="@id/pieces_accessories"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/song_myung"
+            android:lineHeight="17.5sp"
+            android:text="@string/add"
+            android:textColor="@color/color_yellow"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/container"
+            tools:targetApi="p" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
