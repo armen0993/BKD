@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="17dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:id="@+id/name_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/teal_700"
+            android:fontFamily="@font/mulish"
+            android:textFontWeight="400"
+            android:textSize="18sp"
+            android:lineHeight="22.59sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/surname_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surname"
+            android:textColor="@color/teal_700"
+            android:fontFamily="@font/mulish"
+            android:textFontWeight="400"
+            android:textSize="18sp"
+            android:lineHeight="22.59sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toEndOf="@id/name_driver"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/personal_information_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_information"
+            android:textColor="@color/color_gray"
+            android:fontFamily="@font/mulish"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:lineHeight="17.57sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_driver"
+            tools:targetApi="p" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="94dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_rounded_blue_36_px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="4dp"
+            android:text="@string/select"
+            android:textColor="@color/color_yellow"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:lineHeight="22.5sp"
+            android:textFontWeight="400"
+            android:fontFamily="@font/song_myung"
+            android:textStyle="normal"
+            tools:targetApi="p" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

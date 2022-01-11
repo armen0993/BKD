@@ -11,7 +11,8 @@ import com.android.bkd.ui.accessories.adapter.AccessoriesAdapter
 import com.android.bkd.view_model.AccessoriesViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class AccessoriesFragment : BaseFragment<FragmentAccessoriesBinding>(R.layout.fragment_accessories) {
+class AccessoriesFragment :
+    BaseFragment<FragmentAccessoriesBinding>(R.layout.fragment_accessories) {
 
     private val mViewModel by viewModel<AccessoriesViewModel>()
     override fun getViewModel(): BaseViewModel = mViewModel
@@ -20,9 +21,15 @@ class AccessoriesFragment : BaseFragment<FragmentAccessoriesBinding>(R.layout.fr
         super.onViewCreated(view, savedInstanceState)
 
 
+        initAdapter()
+    }
 
-        mBinding.recyclerAccessories.adapter = AccessoriesAdapter(requireContext(),mViewModel.getListAccessories())
-        mBinding.recyclerAccessories.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+    private fun initAdapter() {
+        mBinding.recyclerAccessories.adapter =
+            AccessoriesAdapter(requireContext(), mViewModel.getListAccessories())
+        mBinding.recyclerAccessories.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+
     }
 
 }

@@ -23,5 +23,6 @@ val viewModelModules = module {
     viewModel { EnterEmailViewModel() }
     viewModel { DetailsViewModel() }
     viewModel { AccessoriesViewModel() }
+    viewModel { MyDriversViewModel() }
 
 }

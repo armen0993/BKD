@@ -107,9 +107,16 @@
         <action
             android:id="@+id/action_detailsFragment_to_accessoriesFragment"
             app:destination="@id/accessoriesFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_myDiversFragment"
+            app:destination="@id/myDiversFragment" />
     </fragment>
     <fragment
         android:id="@+id/accessoriesFragment"
         android:name="com.android.bkd.ui.accessories.AccessoriesFragment"
         tools:layout="@layout/fragment_accessories" />
+    <fragment
+        android:id="@+id/myDiversFragment"
+        android:name="com.android.bkd.ui.my_drivers.MyDiversFragment"
+        tools:layout="@layout/fragment_my_divers" />
 </navigation>

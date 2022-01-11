@@ -202,7 +202,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private fun initRecycler() {
         val list = mutableListOf<CarTypeModel>()
-        list.add(CarTypeModel(R.drawable.ic_vans_yellow, "Adastra"))
+        list.add(CarTypeModel(R.layout.item_car_list, "Adastra"))
         list.add(CarTypeModel(R.drawable.ic_vans_yellow, "Beach Bum"))
         list.add(CarTypeModel(R.drawable.ic_vans_yellow, "Dark Phoenix"))
         list.add(CarTypeModel(R.drawable.ic_vans_yellow, "Glass"))

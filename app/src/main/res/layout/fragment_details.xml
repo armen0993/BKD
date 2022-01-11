@@ -628,6 +628,15 @@
                     tools:targetApi="p" />
 
 
+                <com.android.bkd.widget.CarouselRecyclerview
+                    android:id="@+id/carousel_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_accessories"/>
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 

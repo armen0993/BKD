@@ -32,6 +32,9 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
         mBinding.containerDetails.expand()
         mBinding.containerTailLift.collapse()
 
+
+        mBinding.carouselRecycler.set3DItem(true)
+
     }
 
     private fun initListeners() {
@@ -46,6 +49,9 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
 
         mBinding.btnAccessories.setOnClickListener {
             findNavController().navigate(R.id.action_detailsFragment_to_accessoriesFragment)
+        }
+        mBinding.btnAddDriver.setOnClickListener {
+            findNavController().navigate(R.id.action_detailsFragment_to_myDiversFragment)
         }
     }
 
