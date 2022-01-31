@@ -2,6 +2,8 @@ package com.android.bkd.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -12,6 +14,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.android.bkd.R
 import com.android.bkd.databinding.ActivityMainBinding
 import com.android.bkd.view_model.MainViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -45,6 +48,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showBottomBar() {
+
+
+        val badge = mBinding.bottomNavigation.getOrCreateBadge(R.id.notificationFragment)
+        badge.number= 12
+
+
         mBinding.bottomNavigation.setupWithNavController(
             Navigation.findNavController(
                 this,

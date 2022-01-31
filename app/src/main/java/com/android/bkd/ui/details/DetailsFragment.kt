@@ -1,5 +1,6 @@
 package com.android.bkd.ui.details
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
@@ -13,6 +14,8 @@ import com.android.bkd.ui.details.adapter.DetailsAdapter
 import com.android.bkd.ui.details.adapter.TailLiftAdapter
 import com.android.bkd.ui.details.model.DetailsCarModel
 import com.android.bkd.view_model.DetailsViewModel
+import com.google.android.material.badge.BadgeDrawable
+import com.google.android.material.badge.BadgeUtils
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_details) {
@@ -23,6 +26,8 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
     override fun getViewModel(): BaseViewModel = mViewModel
 
 
+
+    @SuppressLint("UnsafeOptInUsageError")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -34,6 +39,10 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
 
 
         mBinding.carouselRecycler.set3DItem(true)
+
+
+
+
 
     }
 
