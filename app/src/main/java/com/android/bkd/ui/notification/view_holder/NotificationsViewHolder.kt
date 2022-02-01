@@ -8,8 +8,8 @@ class NotificationsViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) 
 
     val mBinding = ItemNotificationsBinding.bind(itemView.rootView)
 
-    val notify = mBinding.notification
-    var date_notify = mBinding.date
-    val hour = mBinding.hour
+    val notificationTitle = mBinding.notification
+    var dateTitle = mBinding.date
+    val hourTitle = mBinding.hour
 
 }

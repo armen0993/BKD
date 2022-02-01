@@ -68,6 +68,9 @@ dependencies {
     // Card View
     implementation "androidx.cardview:cardview:1.0.0"
 
+
+    implementation "it.xabaras.android:recyclerview-swipedecorator:1.2.3"
+
     // Coroutine
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt'
